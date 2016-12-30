@@ -1,7 +1,7 @@
 #!/bin/sh
 
 wget https://github.com/carrois/Fira/archive/master.zip
-unzip Fira-master.zip
+unzip master.zip
 sudo mkdir -p /usr/share/fonts/opentype/fira_code
 sudo mkdir -p /usr/share/fonts/opentype/fira_mono
 sudo mkdir -p /usr/share/fonts/opentype/fira_sans
