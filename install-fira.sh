@@ -1,12 +1,9 @@
 #!/bin/sh
-#Updated on 2018-03-26 for FiraSans version 4.3
+#Updated on 2018-06-13 for FiraSans version 4.3 and to copy both oft and ttf files
 
-wget https://github.com/carrois/Fira/archive/master.zip
+wget https://github.com/bBoxType/FiraSans/archive/master.zip
 unzip master.zip
-sudo mkdir -p /usr/share/fonts/opentype/fira_code
-sudo mkdir -p /usr/share/fonts/opentype/fira_mono
-sudo mkdir -p /usr/share/fonts/opentype/fira_sans
-sudo cp FiraSans-master/Fira_Code_3_2/Fonts/FiraCode_OTF_32/* /usr/share/fonts/opentype/fira_code
-sudo cp FiraSans-master/Fira_Mono_3_2/Fonts/FiraMono_OTF_32/* /usr/share/fonts/opentype/fira_mono
-sudo cp FiraSans-master/Fira_Sans_4_3/Fonts/Fira_Sans_OTF_4301/Normal/Roman/* /usr/share/fonts/opentype/fira_sans
-sudo cp FiraSans-master/Fira_Sans_4_3/Fonts/Fira_Sans_OTF_4301/Normal/Italic/* /usr/share/fonts/opentype/fira_sans
+sudo mkdir -p /usr/share/fonts/opentype/fira
+sudo mkdir -p /usr/share/fonts/truetype/fira
+sudo find FiraSans-master/ -name "*.otf" -exec cp {} /usr/share/fonts/opentype/fira/ \;
+sudo find FiraSans-master/ -name "*.ttf" -exec cp {} /usr/share/fonts/truetype/fira/ \;
